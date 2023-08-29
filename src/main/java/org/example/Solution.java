@@ -1,8 +1,19 @@
 package org.example;
 
-public class Solution {
+class Solution {
     public String solution(String s) {
-        String answer = "";
-        return answer;
+        StringBuilder answer = new StringBuilder();
+
+        char before = ' ';
+        for(char c : s.toCharArray()) {
+            char newC =
+                    before == ' '
+                            ? Character.toUpperCase(c)
+                            : Character.toLowerCase(c);
+
+            answer.append(newC);
+            before = c;
+        }
+        return answer.toString();
     }
 }

@@ -16,12 +16,21 @@ class SolutionTest {
         Assertions.assertEquals(result, answer);
     }
 
-    @Disabled
-    @Test @DisplayName("이 메서드는 Mock Up 이다.")
-    void testcase0() {
+    @Test @DisplayName("Test 1")
+    void testcase1() {
         // given
-        String s = "1 2 3 4";
-        String answer = "1 4";
+        String s = "3people unFollowed me";
+        String answer = "3people Unfollowed Me";
+
+        // when & then
+        assertAnswer(s, answer);
+    }
+
+    @Test @DisplayName("Test 2")
+    void testcase2() {
+        // given
+        String s = "for the last week";
+        String answer = "For The Last Week";
 
         // when & then
         assertAnswer(s, answer);
